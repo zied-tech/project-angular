@@ -18,8 +18,6 @@ pipeline {
     stage('Build') {
             steps{
                 script{
-                    sh "whoami"
-                    sh "sudo -l"
                     sh "ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
                 }
             }
