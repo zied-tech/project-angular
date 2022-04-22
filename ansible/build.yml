@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-  gather_facts: true
+  gather_facts: false
   become: true
   become_user: root
   roles:
