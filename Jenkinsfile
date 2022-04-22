@@ -18,7 +18,8 @@ pipeline {
     stage('Build') {
             steps{
                 script{
-                    sh "perms=${sudo -l}; echo ${whoami}; echo ${perms}"
+                    sh "whoami"
+                    sh "sudo -l"
                     sh "ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
                 }
             }
