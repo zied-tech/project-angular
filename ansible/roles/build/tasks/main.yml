@@ -1,4 +1,4 @@
 ---
 #  build project
 - name: build app
-  shell: ng build --prod && chmod 777 -R /var/lib/jenkins/workspace/project-angular/dist
+  shell: ng build && chmod 777 -R /var/lib/jenkins/workspace/project\ angular\ SCM/dist
