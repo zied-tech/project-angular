@@ -4,8 +4,8 @@
   docker_image:
     name: devops
     build:
-     path: /var/lib/jenkins/workspace/project angular SCM
-     pull: no
+      path: /var/lib/jenkins/workspace/project angular SCM
+      pull: no
     source: build
     state: present
     force_source: true
@@ -16,4 +16,4 @@
     state: started
     recreate: true
     ports:
-     - "4200:80"
+      - "4200:80"

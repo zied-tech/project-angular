@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible.json#/definitions/playbook": "file:///Users/zied/Desktop/DevOps-CD/project-angular/ansible/build.yml",
+        "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible.json#/definitions/tasks": "file:///Users/zied/Desktop/DevOps-CD/project-angular/ansible/docker.yml"
+    }
+}
