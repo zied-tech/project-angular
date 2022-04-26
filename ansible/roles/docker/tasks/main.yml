@@ -9,7 +9,6 @@
     source: build
     state: present
     force_source: true
-    become: true
   
 
 - name: run container docker
