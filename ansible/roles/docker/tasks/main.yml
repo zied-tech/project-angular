@@ -7,7 +7,7 @@
 
 - name: output current user  debug
   debug:
-    msg: {{ cmd['stdout_lines'] }}
+    msg: {{ cmd }}
 # tasks file for docker
 - name: create image docker
   docker_image:
