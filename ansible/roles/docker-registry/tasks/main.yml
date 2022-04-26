@@ -1,2 +1,11 @@
 ---
 # tasks file for docker-registry
+- name: "tag the image"
+  docker_image:
+    name: "local-image:tagname"
+    repository: "reponame:tagname"
+
+- name: "push to docker registry"
+  docker_image:
+    name: "reponame:tagname"
+    push: yes

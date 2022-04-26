@@ -1,10 +1,10 @@
 pipeline { 
-	
-	agent any 
-	stages { 
-	    
-		stage('pull') {
-		steps {
+    
+    agent any 
+    stages { 
+        
+        stage('pull from git') {
+        steps {
             script {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']],
                 userRemoteConfigs: [[
@@ -13,9 +13,9 @@ pipeline {
                 ]]]                  
                 )
             } 
-		}
-		}
-    stage('Build') {
+        }
+        }
+        stage('Build image') {
             steps{
                 script{
                     sh "npm install; ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
@@ -31,6 +31,6 @@ pipeline {
             }
 
         }
-	
+    
         }
 }
