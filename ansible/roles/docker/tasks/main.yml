@@ -12,7 +12,7 @@
     force_source: true
   
 
-- name: run container docker
+- name: run image docker
   docker_container:
     name: project-angular
     image: ziedcloud2020/project-angular:latest
