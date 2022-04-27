@@ -15,7 +15,7 @@ pipeline {
             } 
         }
         }
-        stage('Build image') {
+        stage('Build angular app') {
             steps{
                 script{
                     sh "npm install; ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
