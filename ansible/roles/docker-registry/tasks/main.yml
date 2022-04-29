@@ -7,9 +7,8 @@
     reauthorize: yes
 
 - name: Tag and push to docker hub
-  docker_image:
+  community.docker.docker_image:
     name: ziedcloud2020/project-angular:latest
     repository: ziedcloud2020/project-angular
-    tag: 7.0
     push: yes
-
+    source: local
