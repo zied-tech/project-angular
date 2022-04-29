@@ -1,7 +1,7 @@
 ---
 
 # tasks file for docker
-- name: create image docker
+- name: build image docker
   docker_image:
     name: ziedcloud2020/project-angular:latest
     build:
