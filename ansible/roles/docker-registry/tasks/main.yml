@@ -8,7 +8,8 @@
 
 - name: Tag and push to docker hub
   community.docker.docker_image:
-    name: ziedcloud2020/project-angular:latest
+    name: ziedcloud2020/project-angular
     repository: ziedcloud2020/project-angular
+    tag: 2.5
     push: yes
     source: local
