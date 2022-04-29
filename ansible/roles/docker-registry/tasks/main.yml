@@ -5,8 +5,7 @@
     username: ziedcloud2020
     password: ZiedCloud
     reauthorize: yes
-    email: zied.khelifi@esprit.tn
-    
+
 - name: Tag and push to docker hub
   docker_image:
     name: ziedcloud2020/project-angular:latest
