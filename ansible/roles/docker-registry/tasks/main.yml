@@ -12,4 +12,4 @@
     repository: ziedcloud2020/project-angular
     tag: latest
     push: yes
-    source: build
+    source: local
