@@ -2,5 +2,6 @@
 - hosts: localhost
   gather_facts: false
   become: false
+  become-user: root
   roles:
     - { role: monitoring }
