@@ -16,7 +16,7 @@ pipeline {
         stage('Build angular app') {
             steps {
                 script {
-                    sh 'npm install; ansible-playbook ansible/build.yml -i ansible/inventory/host.yml'
+                    sh 'ansible-playbook ansible/build.yml -i ansible/inventory/host.yml'
                 }
             }
         }
@@ -34,5 +34,12 @@ pipeline {
                 }
             }
         }
+        stage('email notifiication'){
+    steps {
+          emailext body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}",
+          recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
+          subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
+      }
+    }
     }
 }

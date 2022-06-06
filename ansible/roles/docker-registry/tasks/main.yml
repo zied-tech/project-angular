@@ -10,6 +10,6 @@
   community.docker.docker_image:
     name: ziedcloud2020/project-angular
     repository: ziedcloud2020/project-angular
-    tag: latest
+    tag: 1.0
     push: yes
     source: local

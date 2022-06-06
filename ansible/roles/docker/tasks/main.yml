@@ -3,7 +3,7 @@
 # tasks file for docker
 - name: build image docker
   docker_image:
-    name: ziedcloud2020/project-angular:latest
+    name: ziedcloud2020/project-angular:1.0
     build:
       path: "/var/lib/jenkins/workspace/project angular SCM"
       pull: no
@@ -15,7 +15,7 @@
 - name: run image docker
   docker_container:
     name: project-angular
-    image: ziedcloud2020/project-angular:latest
+    image: ziedcloud2020/project-angular:1.0
     state: started
     recreate: true
     ports:
