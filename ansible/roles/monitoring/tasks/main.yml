@@ -1,11 +1,16 @@
 ---
 # tasks file for monitoring
+- name: packages | ensure apt list dir exists
+  file:
+    path: /var/lib/apt/lists/
+    state: directory
+    mode: 0755
 - name: install gpg
   apt:
     name: gnupg,software-properties-common
     state: present
     update_cache: yes
-    cache_valid_time: 3600    
+    cache_valid_time: 3600
 - name: add gpg hey
   apt_key:
     url: "https://packages.grafana.com/gpg.key"
@@ -21,7 +26,7 @@
     state: latest
     update_cache: yes
     cache_valid_time: 3600
-    
+
 - name: start service grafana-server
   systemd:
     name: grafana-server
